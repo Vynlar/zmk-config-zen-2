@@ -10,6 +10,18 @@
 };
 
 / {
+        behaviors {
+            hm: homerow_mods {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOMEROW_MODS";
+                #binding-cells = <2>;
+                tapping-term-ms = <300>;
+                quick-tap-ms = <0>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+            };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -23,7 +35,7 @@
 
                         bindings = <
    &kp TAB    &kp Q &kp W          &kp E         &kp R         &kp T   &kp Y     &kp U         &kp I         &kp O          &kp P    &kp MINUS
-   &kp EQUAL  &kp A &ht_tp LCTRL S &ht_tp LALT D &hp_tp LGUI F &kp G   &kp H     &ht_tp LGUI J &ht_tp LALT K &ht_tp LCTRL L &kp SEMI &kp SQT
+   &kp EQUAL  &kp A &hm LCTRL S    &hm LALT D    &hm LGUI F    &kp G   &kp H     &hm LGUI J    &hm LALT K    &hm LCTRL L    &kp SEMI &kp SQT
    &kp &trans &kp Z &kp X          &kp C         &kp V         &kp B   &kp N     &kp M         &kp COMMA     &kp DOT        &kp FSLH &kp ESC
                   &kp BSPC         &kp LSHFT     &mo 1         &kp RET &kp SPACE &mo 2
                         >;
