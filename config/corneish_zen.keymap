@@ -60,13 +60,13 @@
 // ------------------------------------------   ------------------------------------------------
 // | BTCL | BT1 | BT2 |  BT3  |  BT4  | BT5 |   | "|" |  {  |  }  |  +  |  @  |  ^  |
 // |      |     |HOME | PG_DN | PG_UP | END |   |  *  |  (  |  )  |  [  |  ]  |  $  |
-// |      |     |     |       |       |     |   |  `  |  &  |  #  |  %  |  ~  |  !  |
-//                    |       |       |     |   |     |     |     |
+// |      |     |     |       |       |     |   |  `  |  &  |  #  |  %  |  !  |  ~  |
+//                    |       |       |     |   |     |     |  \  |
                         bindings = <
    &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3  &bt BT_SEL 4    &kp PIPE        &kp LBRC &kp RBRC &kp PLUS  &kp AT    &kp CARET
    &trans       &trans       &kp HOME     &kp PG_DN    &kp PG_UP     &kp END         &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp LBKT  &kp RBKT  &kp DLLR
-   &trans       &trans       &trans       &trans       &trans        &trans          &kp GRAVE       &kp AMPS &kp HASH &kp PRCNT &kp TILDE &kp EXCL
-                                          &trans       &trans        &trans          &trans          &trans   &trans
+   &trans       &trans       &trans       &trans       &trans        &trans          &kp GRAVE       &kp AMPS &kp HASH &kp PRCNT &kp EXCL  &kp TILDE
+                                          &trans       &trans        &trans          &trans          &trans   &kp BSLH
                         >;
                 };
         };
